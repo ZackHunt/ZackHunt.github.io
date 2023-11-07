@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+  <div id="freddy">
+    Likes</div>
+  <p>Fnaf movie</p>
+  <button id="upgrade" type="button">Upgrade</button>
+  <img id="JynxziEdits" src="https://roost.nbcuni.com/bin/viewasset.html/content/dam/Peacock/Landing-Pages/campaign/fnaf/fnaf-trailer-thumbnail.jpg/_jcr_content/renditions/original.JPG"?
+
+</body>
+
+</html>
+<script>
+  var subs = 0
+  var score = 0
+  var multiplier = 1
+  document.getElementById("JynxziEdits").addEventListener("click", addscore)
+  document.getElementById("upgrade").addEventListener("click", upgrade)
+  function addscore() {
+    score = score + multiplier
+    document.getElementById("freddy").innerText = "Likes:" + score
+  }
+  function upgrade(){ if(score>9){
+    multiplier = multiplier+10
+    score = score-10
+    document.getElementById("freddy").innerText = "Likes:" + score
+    //score to go down
+     }
+    }
+     
+
+  function idle(){
+    score=score+1
+    document.getElementById("freddy").innerText = "Likes:" + score
+  
+  }
+  setInterval(idle, 10);
+
+</script>
